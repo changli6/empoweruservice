@@ -1,0 +1,7 @@
+# Place your images here, e.g.:
+# - hero-bg.jpg (used as the hero background)
+# - about.jpg
+# - team.jpg
+# Then reference them in index.html / style.css like:
+#   <img src="assets/images/hero-bg.jpg" alt="...">
+#   .hero { background-image: url('assets/images/hero-bg.jpg'); }
