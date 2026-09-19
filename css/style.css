@@ -100,7 +100,7 @@ img { max-width: 100%; display: block; }
     padding: 5rem 0;
     text-align: center;
     overflow: hidden;
-    background-image: url("../assets/images/background1.jpg");
+    background-image: url("../assets/images/background.jpg");
     background-size: cover;
     background-position: center 15%;
     background-repeat: no-repeat;
@@ -494,3 +494,34 @@ body.high-contrast .hero::before {
     height: auto;       /* 高度自适应 */
     border-radius: 10px;/* 圆角 */
 }
+
+/* ── Page Header 通用背景图样式（恢复铺满+居中不重复） ── */
+.page-header.has-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20%; /* 偏上，防止头部/人物被裁 */
+    position: relative;
+    padding: 4.5rem 0;       /* 上下宽度适中（之前7rem太夸张，现回调） */
+    min-height: 480px;       /* 降低兜底高度，避免过高 */
+    display: flex;
+    align-items: center;
+}
+
+.page-header.has-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,132,61,0.85), rgba(0,132,61,0.55));
+    z-index: 1;
+}
+
+.page-header.has-bg .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* 各页面图片路径（每页只管这一行） */
+.page-header-about   { background-image: url("../assets/images/welovendis.jpg"); }
+.page-header-services{background-image: url("../assets/images/services.jpg"); }
+.page-header-contact { background-image: url("../assets/images/contact.jpg"); 
+    padding: 2.5rem 0;}    
