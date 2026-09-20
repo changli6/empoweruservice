@@ -402,22 +402,24 @@ img {
 }
 
 .cat-link-clinical {
-    border-color: #0e7490;
-    color: #0e7490;
-}
 
-.cat-link-clinical:hover {
-    background: #0e7490;
-    color: var(--white);
-}
-
-.cat-link-accommodation {
     border-color: var(--gold-dark);
     color: #8a5a00;
 }
 
-.cat-link-accommodation:hover {
+.cat-link-clinical:hover {
     background: var(--gold-dark);
+    color: var(--white);
+}
+
+.cat-link-accommodation {
+    border-color: #0e7490;
+    color: #0e7490;
+}
+
+.cat-link-accommodation:hover {
+
+    background: #0e7490;
     color: var(--white);
 }
 
@@ -796,7 +798,7 @@ section.page-header.page-header-about.has-bg {
     background-position: center center !important;
 }
 
-section.page-header.page-header-contact.has-bg {
+section.page-header.page-header-services.has-bg {
     background-size: 75% auto !important;
     background-position: center center !important;
 }
@@ -809,6 +811,167 @@ section.page-header.page-header-contact.has-bg {
 
 @media (max-width: 768px) {
     .values-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Privacy Policy Page */
+.privacy-content {
+    padding: 4rem 0;
+}
+
+.privacy-content .container {
+    max-width: 900px;
+}
+
+.last-updated {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.privacy-block {
+    margin-bottom: 2.5rem;
+}
+
+.privacy-block h2 {
+    color: #00843D;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #FFD200;
+    display: inline-block;
+}
+
+.privacy-block p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.privacy-block ul,
+.privacy-block ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.privacy-block li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.privacy-block a {
+    color: #00843D;
+    text-decoration: underline;
+}
+
+.privacy-block a:hover {
+    color: #006B31;
+}
+
+/* ── Home Page Services Preview ── */
+.services-preview {
+    padding: 4rem 0;
+    background: #f8fafc;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #00843D;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+.services-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.preview-category {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid #00843D;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.preview-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 132, 61, 0.12);
+}
+
+.preview-cat-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #FFD200;
+    display: inline-block;
+}
+
+.cat-core {
+    color: #00843D;
+}
+
+.cat-capacity {
+    color: #006B31;
+}
+
+.cat-clinical {
+    color: #e67e22;
+}
+
+.cat-accommodation {
+    color: #2c5282;
+}
+
+.preview-service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.preview-service-list li {
+    padding: 0.4rem 0;
+    padding-left: 1.2rem;
+    position: relative;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.4;
+}
+
+.preview-service-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #00843D;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.preview-link {
+    display: inline-block;
+    color: #00843D;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.preview-link:hover {
+    border-bottom-color: #00843D;
+}
+
+@media (max-width: 768px) {
+    .services-preview-grid {
         grid-template-columns: 1fr;
     }
 }
