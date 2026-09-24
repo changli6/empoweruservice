@@ -1,0 +1,15 @@
+/* Chinese Language Pack - Noto Sans SC */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-weight: 700;
+}
+
+.btn, .btn-primary, .btn-secondary, .btn-text {
+    font-family: 'Noto Sans SC', sans-serif;
+}

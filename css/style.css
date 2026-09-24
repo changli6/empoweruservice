@@ -92,6 +92,7 @@ img {
     transition: color .2s;
 }
 
+
 .nav a:hover {
     color: var(--green);
 }
@@ -561,20 +562,133 @@ img {
 
 /* ================= Footer ================= */
 .footer {
-    background: var(--green-darker);
+    background: #004D23;
     color: rgba(255, 255, 255, 0.8);
-    padding: 2.5rem 0;
+    padding: 2.5rem 0 0;
     text-align: center;
 }
 
-.footer a {
-    color: var(--gold);
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 0 2rem;
 }
 
-.footer a:hover {
-    color: var(--white);
+.footer-section {
+    text-align: center;
 }
 
+.footer-section h3 {
+    color: #FFD200;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-section h4 {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.footer-section ul li {
+    margin-bottom: 0;
+}
+
+.footer-section ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-section ul li a:hover {
+    color: #FFD200;
+}
+
+.footer-section a {
+    color: #FFD200;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 1.5rem 0 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.footer-privacy {
+    margin-top: 0.5rem !important;
+    font-size: 0.8rem;
+}
+
+.footer-privacy a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.footer-privacy a:hover {
+    color: #FFD200;
+    text-decoration: underline;
+}
+.footer-privacy-row {
+    text-align: center;
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-privacy-row a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+.footer-privacy-row a:hover {
+    color: #FFD200;
+    text-decoration: underline;
+}
+/* 移动端 footer 降级 */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-section ul li {
+        display: inline-block;
+        margin: 0 0.5rem;
+    }
+}
 /* ================= Accessibility Toolbar ================= */
 .accessibility-toolbar {
     position: fixed;
@@ -670,8 +784,11 @@ body.high-contrast .hero::before {
     }
 
     .nav {
-        display: none;
+        display: flex;
         position: absolute;
+            align-items: center;
+    gap: 1.5rem;
+    margin-left: auto;
         top: 100%;
         left: 0;
         right: 0;
@@ -680,6 +797,7 @@ body.high-contrast .hero::before {
         padding: 1rem 0;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
+
 
     .nav.active {
         display: flex;
@@ -1041,5 +1159,82 @@ section.page-header.page-header-services.has-bg {
     .accessibility-toolbar {
         bottom: 15px;
         left: 15px;
+    }
+}
+
+/* ── Language Switcher ── */
+.lang-switcher {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-toggle {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+.lang-toggle:hover {
+    background: #fff;
+    color: #00843D;
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    min-width: 160px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.lang-dropdown.active {
+    display: block;
+}
+
+.lang-dropdown .lang-option {
+    display: block;
+    padding: 0.6rem 1rem;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.lang-dropdown .lang-option:hover {
+    background: #f0f0f0;
+}
+
+.lang-dropdown .lang-option.active {
+    background: #00843D;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .lang-switcher {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    .lang-toggle {
+        width: 100%;
+        text-align: center;
+        border-color: #00843D;
+        color: #00843D;
+    }
+    .lang-dropdown {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #ddd;
+        margin-top: 0.5rem;
     }
 }

@@ -1,0 +1,15 @@
+/* Korean Language Pack - Noto Sans KR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    font-weight: 700;
+}
+
+.btn, .btn-primary, .btn-secondary, .btn-text {
+    font-family: 'Noto Sans KR', sans-serif;
+}
