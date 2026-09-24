@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,26 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <!-- Header -->
 <header class="header">
     <div class="container">
-        <a href="index.html" class="logo" >Empower U <span>Service</span>
-        </a>
+        <a href="index.html" class="logo">Empower U <span>Service</span></a>
         <nav class="nav" id="nav">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="contact.html">Contact</a>
+            <div class="lang-switcher">
+                <button class="lang-toggle" id="langToggle">🌐 EN ▾</button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <a href="index.html" class="lang-option active">🇦🇺 English</a>
+                    <a href="index-zh.html" class="lang-option">🇨🇳 中文</a>
+                    <a href="index-ko.html" class="lang-option">🇰🇷 한국어</a>
+                </div>
+            </div>
         </nav>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
     </div>
@@ -31,6 +40,8 @@
         <p>Registered NDIS provider services across Australia. Help you live the life you choose.</p>
         <a href="contact.html" class="btn btn-primary">Get in Touch</a>
         <a href="services.html" class="btn btn-secondary" style="margin-left:0.75rem;">Learn More</a>
+        <p style="margin-top: 1rem; font-size: 1.1rem; font-weight: 550; color: rgba(255,255,255,0.85);">Aged Care services
+        <a href="#" style="color:#FFD200; font-weight:600; text-decoration:underline;">coming soon</a></p>
     </div>
 </section>
 
@@ -72,7 +83,7 @@
             <div class="preview-category">
                 <h3 class="preview-cat-title cat-clinical">Specialist &amp; Clinical</h3>
                 <ul class="preview-service-list">
-                    <li>Module 2A Implementing Behaviour Support Plan</li>
+                    <li>Module 2A — Implementing Behaviour Support Plan</li>
                     <li>Assist Personal Activities High</li>
                     <li>Community Nursing Care</li>
                     <li>Daily Tasks / Shared Living</li>
@@ -115,13 +126,28 @@
 </section>
 
 <!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <p>NDIS Registration Number: 4050162046</p>
-        <p><a href="contact.html">Contact Us</a> | <a href="mailto:hello@empoweruservice.com">hello@empoweruservice.com</a> | <a href="privacy.html">Privacy Policy</a></p>
-    </div>
-</footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Empower U Service</h3>
+                    <p>Reducing barriers to live your best life. Registered NDIS Provider.</p>
+                    <p>NDIS Registration Number: 4050162046</p>
+                </div>
 
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: <a href="mailto:hello@empoweruservice.com">hello@empoweruservice.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Empower U Service. All rights reserved.</p>
+            </div>
+            <div class="footer-privacy-row">
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
 <!-- Accessibility Toolbar -->
 <div class="accessibility-toolbar">
     <button class="accessibility-toggle" id="a11yToggle" aria-label="Accessibility tools">♿</button>

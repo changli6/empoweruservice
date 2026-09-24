@@ -7,11 +7,12 @@ if (hamburger && nav) {
         nav.classList.toggle('active');
     });
 
-    nav.querySelectorAll('a').forEach(function(link) {
-        link.addEventListener('click', function() {
+    var navLinks = nav.querySelectorAll('a');
+    for (var i = 0; i < navLinks.length; i++) {
+        navLinks[i].addEventListener('click', function() {
             nav.classList.remove('active');
         });
-    });
+    }
 }
 
 // ── Language Switcher ──
@@ -97,23 +98,32 @@ if (backToTop) {
     });
 }
 
-// ── Contact Form (Formspree + hCaptcha) ──
-var contactForm = document.getElementById('contactForm');
-if (contactForm) {
+// ── Contact Form (Formspree) ──
+document.addEventListener('DOMContentLoaded', function() {
+    var contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
+
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        var submitBtn = contactForm.querySelector('button[type="submit"]');
-        var originalText = submitBtn.textContent;
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
+        var subjectSel = contactForm.querySelector('#subject');
+        var subjectText = 'General Enquiry';
+        if (subjectSel && subjectSel.selectedOptions.length > 0) {
+            subjectText = subjectSel.selectedOptions[0].text;
+        }
+
+        var hidden = contactForm.querySelector('#email-subject');
+        if (hidden) {
+            hidden.value = 'Empower U Service Enquiry — ' + subjectText;
+        }
 
         var formData = new FormData(contactForm);
-        var subjectSelect = contactForm.querySelector('#subject');
-        if (subjectSelect) {
-            var subjectText = subjectSelect.options[subjectSelect.selectedIndex].text;
-            formData.set('subject', subjectText);
-        }
+        formData.set('subject', 'Empower U Service Enquiry — ' + subjectText);
+
+        var submitBtn = contactForm.querySelector('button[type="submit"]');
+        var originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
 
         fetch(contactForm.action, {
             method: 'POST',
@@ -122,15 +132,24 @@ if (contactForm) {
         })
         .then(function(response) {
             if (response.ok) {
-                contactForm.innerHTML = '<div class="form-success"><h3>Message Sent!</h3><p>We\'ll get back to you within 24 hours.</p></div>';
+                var lang = (document.documentElement.lang || 'en').substring(0, 2);
+                var successHtml = '';
+                if (lang === 'zh') {
+                    successHtml = '<div class="form-success"><h3>✓ 消息已发送！</h3><p>感谢您的联系，我们将在 24 小时内回复您。</p></div>';
+                } else if (lang === 'ko') {
+                    successHtml = '<div class="form-success"><h3>✓ 메시지가 전송되었습니다!</h3><p>문의해 주셔서 감사합니다. 24시간 이내에 연락드리겠습니다.</p></div>';
+                } else {
+                    successHtml = '<div class="form-success"><h3>✓ Message Sent!</h3><p>Thank you for contacting us. We\'ll get back to you within 24 hours.</p></div>';
+                }
+                contactForm.innerHTML = successHtml;
             } else {
-                throw new Error('Network response was not ok');
+                throw new Error('Failed');
             }
         })
         .catch(function() {
-            alert('Something went wrong. Please try again or email us directly.');
-            submitBtn.disabled = false;
             submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            alert('Something went wrong. Please try again or email us directly at hello@empoweruservice.com');
         });
     });
-}
+});

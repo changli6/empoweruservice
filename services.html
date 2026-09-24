@@ -18,8 +18,16 @@
             <nav class="nav" id="nav">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="services.html">Services</a>
+                <a href="services.html" class="active">Services</a>
                 <a href="contact.html">Contact</a>
+                <div class="lang-switcher">
+                    <button class="lang-toggle" id="langToggle">🌐 EN ▾</button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <a href="index.html" class="lang-option active">🇦🇺 English</a>
+                        <a href="index-zh.html" class="lang-option">🇨🇳 中文</a>
+                        <a href="index-ko.html" class="lang-option">🇰🇷 한국어</a>
+                    </div>
+                </div>
             </nav>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
         </div>
@@ -124,10 +132,10 @@
                     <li class="service-item">
                         <h3>Positive Behaviour Support</h3>
                         <p>Our Positive Behaviour Support (PBS) program is designed to understand and address your
-                            child’s behaviours of concern using proven, compassionate strategies.
+                            child's behaviours of concern using proven, compassionate strategies.
                             Our goal is to improve quality of life for your child and your whole family by teaching new,
                             positive skills and reducing behaviours that get in the way of everyday life.
-                            Links to Life is an NDIS-registered provider. All of our Behaviour Support Practitioners are
+                            All of our Behaviour Support Practitioners are
                             experienced and trauma-informed, working closely with families, teachers, and support
                             workers to deliver plans that make a real difference.</p>
                     </li>
@@ -152,10 +160,10 @@
                     </li>
                     <li class="service-item">
                         <h3>Assist Personal Activities High</h3>
-                        <p>High-intensity support delivered by trained and qualified staff for participants with complex needs including: 
-                            Complex Bowel Care, Enteral (Naso-Gastric Tube-Jejunum or Duodenum) Feeding and Management, 
-                            Tracheostomy Management, Urinary Catheter, Management (In-dwelling Urinary Catheter, In-out Catheter, SPC), 
-                            Ventilator Management, Subcutaneous Injections, Seizure management, Complex Wound Management 
+                        <p>High-intensity support delivered by trained and qualified staff for participants with complex needs including:
+                            Complex Bowel Care, Enteral (Naso-Gastric Tube-Jejunum or Duodenum) Feeding and Management,
+                            Tracheostomy Management, Urinary Catheter, Management (In-dwelling Urinary Catheter, In-out Catheter, SPC),
+                            Ventilator Management, Subcutaneous Injections, Seizure management, Complex Wound Management
                             and Severe Dysphagia Management etc.</p>
                     </li>
                     <li class="service-item">
@@ -218,26 +226,38 @@
     </section>
 
     <footer class="footer">
-        <div class="container footer-grid">
-            <div>
-                <h3>Empower U Service</h3>
-                <p>Reducing barriers to live your best life. Registered NDIS Provider.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Empower U Service</h3>
+                    <p>Reducing barriers to live your best life. Registered NDIS Provider.</p>
+                    <p>NDIS Registration Number: 4050162046</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: <a href="mailto:hello@empoweruservice.com">hello@empoweruservice.com</a></p>
+                </div>
             </div>
-            <div>
-                <h3>Quick Links</h3>
-                <p><a href="about.html">About</a> · <a href="services.html">Services</a> · <a
-                        href="contact.html">Contact</a></p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Empower U Service. All rights reserved.</p>
             </div>
-            <div>
-                <h3>Contact</h3>
-                <p><a href="mailto:hello@empoweruservice.com">hello@empoweruservice.com</a></p>
+            <div class="footer-privacy-row">
+                <a href="privacy.html">Privacy Policy</a>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>NDIS Registration Number: 4050162046</p>
-            <p><a href="privacy.html">Privacy Policy</a> | <a href="#">Accessibility</a></p>
         </div>
     </footer>
+    <!-- Accessibility Toolbar -->
+<div class="accessibility-toolbar">
+    <button class="accessibility-toggle" id="a11yToggle" aria-label="Accessibility tools">♿</button>
+    <div class="accessibility-options" id="a11yOptions">
+        <button id="a11yIncrease">A+ Larger Text</button>
+        <button id="a11yDecrease">A- Smaller Text</button>
+        <button id="a11yContrast">◐ High Contrast</button>
+        <button id="a11yReset">↺ Reset</button>
+    </div>
+</div>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
     <script src="js/main.js"></script>
 </body>

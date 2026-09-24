@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - Empower U Service</title>
+    <meta name="description" content="联系 Empower U Service，了解 NDIS 支持、SIL 住宿或一般咨询。我们随时为您提供帮助。">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-zh.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="index-zh.html" class="logo">Empower U <span>Service</span></a>
+        <nav class="nav" id="nav">
+            <a href="index-zh.html">首页</a>
+            <a href="about-zh.html">关于我们</a>
+            <a href="services-zh.html">服务项目</a>
+            <a href="contact-zh.html" class="active">联系我们</a>
+            <div class="lang-switcher">
+                <button class="lang-toggle" id="langToggle">🌐 中文 ▾</button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <a href="index.html" class="lang-option">🇦🇺 English</a>
+                    <a href="index-zh.html" class="lang-option active">🇨🇳 中文</a>
+                    <a href="index-ko.html" class="lang-option">🇰🇷 한국어</a>
+                </div>
+            </div>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+    </div>
+</header>
+
+<section class="page-header page-header-contact has-bg">
+    <div class="container">
+        <h1>联系我们</h1>
+        <p>随时联系我们——我们随时为您在 NDIS 之旅上提供帮助。</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-form-wrapper">
+                <h2>给我们留言</h2>
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnpnjvlb" method="POST">
+                    <div class="form-group">
+                        <label for="name">姓名 *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱 *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">电话号码</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">主题</label>
+                        <select id="subject" name="subject">
+                            <option value="general">一般咨询</option>
+                            <option value="pbs">专业行为支持计划</option>
+                            <option value="module2a">Module 2A 行为支持实施</option>
+                            <option value="accommodation">短期与中期住宿</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言内容 *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" id="email-subject" value="">
+                    <button type="submit" class="btn btn-primary btn-full">发送消息</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>联系方式</h2>
+                <div class="info-item"><h3>✉️ 邮箱</h3><p><a href="mailto:hello@empoweruservice.com">hello@empoweruservice.com</a></p></div>
+                <div class="info-item"><h3>📍 地址</h3><p>新南威尔士州 南彭里斯<br>澳大利亚</p></div>
+                <div class="info-item"><h3>🕒 办公时间</h3><p>周一至周五：上午 9:00 – 下午 5:00<br>周末：需预约</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Empower U Service</h3>
+                <p>澳大利亚注册 NDIS 服务提供商。帮助您过上自己选择的生活。</p>
+            </div>
+            <div class="footer-section">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="index-zh.html">首页</a></li>
+                    <li><a href="about-zh.html">关于我们</a></li>
+                    <li><a href="services-zh.html">服务项目</a></li>
+                    <li><a href="contact-zh.html">联系我们</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <p>邮箱：<a href="mailto:hello@empoweruservice.com">hello@empoweruservice.com</a></p>
+                <p>NDIS 注册号：4050162046</p>
+            </div>
+        </div>
+        <div class="footer-privacy-row">
+            <a href="privacy.html">隐私政策</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Empower U Service. 保留所有权利。</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

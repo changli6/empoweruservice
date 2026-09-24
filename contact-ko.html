@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의하기 - Empower U Service</title>
+    <meta name="description" content="NDIS 지원, SIL 거주 또는 일반 문의사항이 있으시면 Empower U Service로 연락해 주세요. 기꺼이 도와드리겠습니다.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-ko.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="index-ko.html" class="logo">Empower U <span>Service</span></a>
+        <nav class="nav" id="nav">
+            <a href="index-ko.html">홈</a>
+            <a href="about-ko.html">소개</a>
+            <a href="services-ko.html">서비스</a>
+            <a href="contact-ko.html" class="active">문의하기</a>
+            <div class="lang-switcher">
+                <button class="lang-toggle" id="langToggle">🌐 한국어 ▾</button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <a href="index.html" class="lang-option">🇦🇺 English</a>
+                    <a href="index-zh.html" class="lang-option">🇨🇳 中文</a>
+                    <a href="index-ko.html" class="lang-option active">🇰🇷 한국어</a>
+                </div>
+            </div>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+    </div>
+</header>
+
+<section class="page-header page-header-contact has-bg">
+    <div class="container">
+        <h1>문의하기</h1>
+        <p>언제든 연락 주세요 — 귀하의 NDIS 여정을 기꺼이 돕겠습니다.</p>
+    </div>
+</section>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-form-wrapper">
+                <h2>메시지 보내기</h2>
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnpnjvlb" method="POST">
+                    <div class="form-group">
+                        <label for="name">성함 *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">이메일 *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">전화번호</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">주제</label>
+                        <select id="subject" name="subject">
+                            <option value="general">일반 문의</option>
+                            <option value="pbs">전문 행동 지원 계획</option>
+                            <option value="module2a">Module 2A 행동 지원 시행</option>
+                            <option value="accommodation">단기 및 중기 숙박</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">메시지 *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" id="email-subject" value="">
+                    <button type="submit" class="btn btn-primary btn-full">메시지 보내기</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>연락처</h2>
+                <div class="info-item"><h3>✉️ 이메일</h3><p><a href="mailto:hello@empoweruservice.com">hello@empoweruservice.com</a></p></div>
+                <div class="info-item"><h3>📍 주소</h3><p>South Penrith, NSW<br>호주</p></div>
+                <div class="info-item"><h3>🕒 운영 시간</h3><p>월요일 – 금요일: 오전 9:00 – 오후 5:00<br>주말: 예약제</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Empower U Service</h3>
+                <p>호주 등록 NDIS 제공자 서비스. 원하는 삶을 살 수 있도록 돕습니다.</p>
+            </div>
+            <div class="footer-section">
+                <h4>바로가기</h4>
+                <ul>
+                    <li><a href="index-ko.html">홈</a></li>
+                    <li><a href="about-ko.html">소개</a></li>
+                    <li><a href="services-ko.html">서비스</a></li>
+                    <li><a href="contact-ko.html">문의하기</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>연락처</h4>
+                <p>이메일: <a href="mailto:hello@empoweruservice.com">hello@empoweruservice.com</a></p>
+                <p>NDIS 등록 번호: 4050162046</p>
+            </div>
+        </div>
+        <div class="footer-privacy-row">
+            <a href="privacy.html">개인정보처리방침</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Empower U Service. 모든 권리 보유.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
