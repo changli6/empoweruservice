@@ -739,8 +739,26 @@ img {
 }
 
 /* High Contrast */
-body.a11y-contrast {
+/* body.a11y-contrast {
     filter: contrast(150%) !important;
+} */
+
+body.a11y-contrast {
+    --text: #ffffff;
+    --text-light: #ffffff;
+    --green: #00ff88;
+    --green-dark: #00cc6a;
+    --green-darker: #009951;
+    --gold: #ffff00;
+    --gold-dark: #cccc00;
+    --white: #000000;
+    --bg-light: #111111;
+    --bg-gray: #1a1a1a;
+    
+    background: #000000 !important;
+    color: #ffffff !important;
+    filter: none !important;
+    transform: none !important;
 }
 
 body.a11y-large {
@@ -769,6 +787,12 @@ body.high-contrast .accessibility-options {
 
 body.high-contrast .hero::before {
     background: rgba(0, 0, 0, 0.92) !important;
+}
+body.a11y-contrast .service-item p {
+    color: #ffffff !important;
+}
+body.a11y-contrast .preview-service-list li {
+    color: #ffffff !important;
 }
 
 /* ================= Language Switcher ================= */
