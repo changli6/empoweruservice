@@ -423,6 +423,21 @@ img {
 .cat-link-clinical:hover { background: var(--gold-dark); color: var(--white); }
 .cat-link-accommodation { border-color: #0e7490; color: #0e7490; }
 .cat-link-accommodation:hover { background: #0e7490; color: var(--white); }
+.cat-link-agedcare {
+    border-color: #7c3aed;
+    color: #6d28d9;
+    background: linear-gradient(135deg, #f5f0ff 0%, var(--white) 100%);
+}
+.cat-link-agedcare:hover { background: #7c3aed; color: var(--white); }
+
+.agedcare-link {
+    color: #6d28d9;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    word-break: break-all;
+}
+.agedcare-link:hover { color: #7c3aed; }
 
 /* ================= About ================= */
 .about-preview {
